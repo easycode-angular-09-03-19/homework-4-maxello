@@ -41,18 +41,17 @@ export class TodosComponent implements OnInit {
   ngOnInit() {  
   }
 
-  onRemoveTask(item: Task){
+  onRemoveTask(item: Task) {
     this.tasks.splice(this.tasks.indexOf(item), 1);
   }
 
-  completeAllTasks(){
-    this.tasks.map((item: Task): void => {
+  completeAllTasks() {
+    this.tasks.forEach((item: Task): void => {
       item.completed = true;
     });
   }
 
-  onAddTask(task: Task){
-    console.log(task);
+  onAddTask(task: Task) {
     this.tasks.push(task);
   }
 }

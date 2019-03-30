@@ -14,11 +14,11 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  removeTask(){
+  removeTask() {
     confirm("Are you sure?") ? this.outputTask.emit(this.task) : null;
   }
 
-  completeTask(){
+  completeTask() {
     this.task.completed = true;
   } 
 

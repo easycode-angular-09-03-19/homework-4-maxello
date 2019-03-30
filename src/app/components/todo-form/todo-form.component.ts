@@ -19,7 +19,7 @@ export class TodoFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTask(){
+  addTask() {
     this.lastId += 1;
     this.outputTask.emit({
       id: this.lastId, 
@@ -28,8 +28,8 @@ export class TodoFormComponent implements OnInit {
     });
   }
 
-  onSubmit(form: any){
-    if(form.valid){
+  onSubmit(form: any) {
+    if(form.valid) {
       this.addTask();
       form.resetForm();
     }
