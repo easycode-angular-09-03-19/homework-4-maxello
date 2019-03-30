@@ -1,0 +1,8 @@
+<td>{{ task.text }}</td>
+<td width="120">
+  <button type="button" *ngIf="!task.completed" (click)="completeTask()" class="btn btn-success">Complete</button>
+</td>
+<td width="120">
+  <button type="button" (click)="removeTask()" class="btn btn-danger">Remove</button>
+</td>
+

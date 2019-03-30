@@ -1,0 +1,20 @@
+<app-todo-form [lastId]="currentId" (outputTask)="onAddTask($event)"></app-todo-form>
+<div *ngIf="tasks && tasks.length" class="btn-holder clearfix">
+  <button type="button" (click)="completeAllTasks()" class="btn btn-success">Complete all tasks</button>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Complete</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="{completed: item.completed}" app-todo-item (outputTask)="onRemoveTask($event)" [task]="item" *ngFor="let item of tasks">
+      </tr>
+    </tbody>
+  </table>
+</div>
+

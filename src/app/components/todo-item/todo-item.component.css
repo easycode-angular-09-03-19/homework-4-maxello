@@ -1,0 +1,8 @@
+td {
+  padding: 12px;
+	border-top: 1px solid #dee2e6;
+	vertical-align: middle;
+}
+td.completed {
+  background-color: aquamarine;
+}
